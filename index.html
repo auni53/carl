@@ -1,56 +1,62 @@
 <!doctype HTML5>
 
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#">
+  <head>
+  
+    <title>I love carl</title>
+    <meta property="og:image" content="http://i.imgur.com/KrUhGuu.png" />
+    <style>
+     body { background-color: black; }
+     h1 { font-family: Comic Sans, Helvetica Neue, sans-serif; font-size: 5em; 
+           animation-name: spin; animation-duration: 4000ms; animation-iteration-count: infinite; animation-timing-function: linear; text-align: center; 
+          padding-bottom: 2em;}
 
-  <style>
-   body { background-color: black; }
-    h1 { font-family: Comic Sans, Helvetica Neue, sans-serif; font-size: 5em; 
-	 animation-name: spin; animation-duration: 4000ms; animation-iteration-count: infinite; animation-timing-function: linear; text-align: center; 
-	padding-bottom: 2em;}
+      @keyframes spin { 
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+     }
 
-    @keyframes spin { 
-	from { transform: rotate(0deg); }
-	to { transform: rotate(360deg); }
-   }
+    .rainbow {
+      background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+      color:transparent;
+      background-clip: text;
+    }
 
-  .rainbow {
-    background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-    color:transparent;
-    background-clip: text;
-  }
-
-  #colorCycle { background-color: #C30; 
-border: medium solid #FF0; 
-padding-top: 5px; padding-right: 7px; padding-bottom: 7px; padding-left: 7px; 
-color: #FFF;
-text-align: center; 
-animation-name: homeCycle; 
-animation-duration:1s; 
-animation-direction:alternate; 
-animation-iteration-count:infinite; }
-
-
-@keyframes homeCycle 
-{
-0% {background-color:#ffff00;} 
-25% {background-color:#ff00ff;} 
-50% {background-color:#00ffff;} 
-75% {background-color:#ccff33;} 
-} 
+    #colorCycle { background-color: #C30; 
+  border: medium solid #FF0; 
+  padding-top: 5px; padding-right: 7px; padding-bottom: 7px; padding-left: 7px; 
+  color: #FFF;
+  text-align: center; 
+  animation-name: homeCycle; 
+  animation-duration:1s; 
+  animation-direction:alternate; 
+  animation-iteration-count:infinite; }
 
 
-  </style>
+  @keyframes homeCycle 
+  {
+  0% {background-color:#ffff00;} 
+  25% {background-color:#ff00ff;} 
+  50% {background-color:#00ffff;} 
+  75% {background-color:#ccff33;} 
+  } 
 
 
-</head>
-<body>
-  <div style="animation: spin 5s infinite;">
-    <div id="colorCycle">
-      <h1>I love Carl</h1>
-      <h1>I love Carl</h1>
-      <h1>I love Carl</h1>
-      <h1>I love Carl</h1>
-      <h1>I love Carl</h1>
+    </style>
+
+
+  </head>
+  <body>
+    <div style="animation: spin 5s infinite;">
+      <div id="colorCycle">
+        <h1>I love Carl</h1>
+        <h1>I love Carl</h1>
+        <h1>I love Carl</h1>
+        <h1>I love Carl</h1>
+        <h1>I love Carl</h1>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
+
+</html>
