@@ -9,7 +9,6 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="http://i.imgur.com/KrUhGuu.png" />
 
-
     <style>
      body { background-color: black; }
      h1 { font-family: Comic Sans, Helvetica Neue, sans-serif; font-size: 5em; 
@@ -54,13 +53,30 @@
   <body>
     <div style="animation: spin 5s infinite;">
       <div id="colorCycle">
-        <h1>I love Carl</h1>
-        <h1>I love Carl</h1>
-        <h1>I love Carl</h1>
-        <h1>I love Carl</h1>
-        <h1>I love Carl</h1>
+        <h1 id="1">I love Carl</h1>
+        <h1 id="2">I love Carl</h1>
+        <h1 id="3">I love Carl</h1>
+        <h1 id="4">I love Carl</h1>
+        <h1 id="5">I love Carl</h1>
       </div>
     </div>
+
+    <script>
+      window.onload = function() {
+        var search = window.location.search;
+        console.log(search);
+        if (search != "") {
+          var text = search.slice(1).split('_').join(' ');
+          console.log(text);
+
+          var ids = [1, 2, 3, 4, 5];
+          for (let i in ids) {
+            document.getElementById(ids[i]).innerHTML = text;
+          }
+        }
+      }
+    </script>
+
   </body>
 
 </html>
